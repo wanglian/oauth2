@@ -127,8 +127,8 @@ Thanks, |7eter l-|. l3oling
   spec.add_dependency("snaky_hash", "~> 2.0", ">= 2.0.3") # Ruby >= 2.2
   spec.add_dependency("version_gem", ">= 1.1.8", "< 3")   # Ruby >= 2.2
 
-  spec.add_development_dependency("appraisal2", "~> 3.0")               # ruby >= 1.8.7
   spec.add_development_dependency("addressable", "~> 2.8", ">= 2.8.7")  # ruby >= 2.2
+  spec.add_development_dependency("appraisal2", "~> 3.0")               # ruby >= 1.8.7
   spec.add_development_dependency("backports", "~> 3.25", ">= 3.25.1")  # ruby >= 0
   spec.add_development_dependency("nkf", "~> 0.2")                      # ruby >= 2.3
   spec.add_development_dependency("rake", "~> 13.0")                    # ruby >= 2.2
