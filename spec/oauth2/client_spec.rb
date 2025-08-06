@@ -1216,13 +1216,6 @@ RSpec.describe OAuth2::Client do
         }.not_to raise_error
       end
     end
-
-    def stubbed_client(params = {}, &stubs)
-      params = {site: "https://api.example.com"}.merge(params)
-      OAuth2::Client.new("abc", "def", params) do |builder|
-        builder.adapter :test, &stubs
-      end
-    end
   end
 
   describe "#revoke_token" do
@@ -1257,6 +1250,19 @@ RSpec.describe OAuth2::Client do
         expect {
           instance.revoke_token(token, nil, extra: "param")
         }.not_to raise_error
+      end
+
+      it "submits params in request body" do
+        client = stubbed_client do |stub|
+          stub.post("/oauth/revoke") do |req|
+            expect(req.body[:token]).to eq(token)
+            expect(req.params).to be_empty
+
+            [200, {"Content-Type" => "application/json"}, ""]
+          end
+        end
+
+        client.revoke_token(token, "access_token", token_method: :post)
       end
 
       it "has status 200" do
@@ -1330,6 +1336,13 @@ RSpec.describe OAuth2::Client do
   describe "#inspect" do
     it "filters out the @secret value" do
       expect(subject.inspect).to include("@secret=[FILTERED]")
+    end
+  end
+
+  def stubbed_client(params = {}, &stubs)
+    params = {site: "https://api.example.com"}.merge(params)
+    OAuth2::Client.new("abc", "def", params) do |builder|
+      builder.adapter :test, &stubs
     end
   end
 end

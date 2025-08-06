@@ -256,10 +256,10 @@ module OAuth2
     # @see https://datatracker.ietf.org/doc/html/rfc7009#section-2.1
     def revoke_token(token, token_type_hint = nil, params = {}, &block)
       params[:token_method] ||= :post_with_query_string
+      params[:token] = token
+      params[:token_type_hint] = token_type_hint if token_type_hint
+
       req_opts = params_to_req_opts(params)
-      req_opts[:params] ||= {}
-      req_opts[:params][:token] = token
-      req_opts[:params][:token_type_hint] = token_type_hint if token_type_hint
 
       request(http_method, revoke_url, req_opts, &block)
     end
