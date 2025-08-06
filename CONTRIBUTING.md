@@ -1,6 +1,6 @@
 ## Contributing
 
-Bug reports and pull requests are welcome on GitLab at [https://gitlab.com/oauth-xx/oauth2][🚎src-main].
+Bug reports and pull requests are welcome on GitLab at [https://gitlab.com/ruby-oauth/oauth2][🚎src-main].
 This project should be a safe, welcoming space for collaboration, so contributors agree to adhere to
 the [code of conduct][🤝conduct].
 
@@ -78,7 +78,7 @@ bundle exec rake rubocop_gradual:autocorrect
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/oauth-xx/oauth2/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/ruby-oauth/oauth2/-/graphs/main][🚎contributors-gl]
 
 ## For Maintainers
 
@@ -116,13 +116,13 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 12. Run `bundle exec rake release` which will create a git tag for the version,
     push git commits and tags, and push the `.gem` file to [rubygems.org][💎rubygems]
 
-[🚎src-main]: https://gitlab.com/oauth-xx/oauth2
-[🧪build]: https://github.com/oauth-xx/oauth2/actions
-[🤝conduct]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CODE_OF_CONDUCT.md
+[🚎src-main]: https://gitlab.com/ruby-oauth/oauth2
+[🧪build]: https://github.com/ruby-oauth/oauth2/actions
+[🤝conduct]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/oauth-xx/oauth2/graphs/contributors
-[🚎contributors-gl]: https://gitlab.com/oauth-xx/oauth2/-/graphs/main
-[🖐contributors-img]: https://contrib.rocks/image?repo=oauth-xx/oauth2
+[🖐contributors]: https://github.com/ruby-oauth/oauth2/graphs/contributors
+[🚎contributors-gl]: https://gitlab.com/ruby-oauth/oauth2/-/graphs/main
+[🖐contributors-img]: https://contrib.rocks/image?repo=ruby-oauth/oauth2
 [💎rubygems]: https://rubygems.org
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/rubygems/pull/6022

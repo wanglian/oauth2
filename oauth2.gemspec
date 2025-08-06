@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   # Linux distros often package gems and securely certify them independent
   #   of the official RubyGem certification process. Allowed via ENV["SKIP_GEM_SIGNING"]
-  # Ref: https://gitlab.com/oauth-xx/version_gem/-/issues/3
+  # Ref: https://gitlab.com/ruby-oauth/version_gem/-/issues/3
   # Hence, only enable signing if `SKIP_GEM_SIGNING` is not set in ENV.
   # See CONTRIBUTING.md
   unless ENV.include?("SKIP_GEM_SIGNING")
@@ -35,8 +35,8 @@ Gem::Specification.new do |spec|
     end
   end
 
-  gl_homepage = "https://gitlab.com/oauth-xx/#{spec.name}"
-  gh_mirror = "https://github.com/oauth-xx/#{spec.name}"
+  gl_homepage = "https://gitlab.com/ruby-oauth/#{spec.name}"
+  gh_mirror = "https://github.com/ruby-oauth/#{spec.name}"
 
   spec.summary = "OAuth 2.0 Core Ruby implementation"
   spec.description = "Ruby wrapper for the OAuth 2.0 protocol"

@@ -15,9 +15,9 @@ authors:
     affiliation: railsbling.com
 identifiers:
   - type: url
-    value: 'https://github.com/oauth-xx/oauth2'
+    value: 'https://github.com/ruby-oauth/oauth2'
     description: oauth2
-repository-code: 'https://github.com/oauth-xx/oauth2'
+repository-code: 'https://github.com/ruby-oauth/oauth2'
 abstract: >-
   oauth2
 license: See license file
