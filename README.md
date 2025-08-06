@@ -1,12 +1,12 @@
 <p align="center">
     <a href="https://discord.gg/3qme4XHNKN" target="_blank" rel="noopener">
-      <img width="124px" src="https://github.com/oauth-xx/oauth2/raw/main/docs/images/logo/galtzo-floss-logos-original.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
+      <img width="124px" src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/galtzo-floss-logos-original.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
     </a>
     <a href="http://oauth.net/2/" target="_blank" rel="noopener">
-      <img src="https://github.com/oauth-xx/oauth2/raw/main/docs/images/logo/oauth2-logo-124px.png?raw=true" alt="OAuth 2.0 Logo by Chris Messina, CC BY-SA 3.0">
+      <img src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/oauth2-logo-124px.png?raw=true" alt="OAuth 2.0 Logo by Chris Messina, CC BY-SA 3.0">
     </a>
     <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
-      <img width="124px" src="https://github.com/oauth-xx/oauth2/raw/main/docs/images/logo/ruby-logo-198px.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5">
+      <img width="124px" src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/ruby-logo-198px.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5">
     </a>
 </p>
 
@@ -27,9 +27,9 @@ This is a RubyGem for implementing OAuth 2.0 clients (not servers) in Ruby appli
 
 | Federated [DVCS][💎d-in-dvcs] Repository      | Status                                                            | Issues                    | PRs                      | Wiki                      | CI                       | Discussions                  |
 |-----------------------------------------------|-------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [oauth-xx/oauth2 on GitLab][📜src-gl]      | The Truth                                                         | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜wiki]              | 🏀 Tiny Matrix           | ➖                            |
-| 🧊 [oauth-xx/oauth2 on CodeBerg][📜src-cb]    | An Ethical Mirror ([Donate][🤝cb-donate])                         | ➖                         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
-| 🐙 [oauth-xx/oauth2 on GitHub][📜src-gh]      | A Dirty Mirror                                                    | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | ➖                         | 💯 Full Matrix           | ➖                            |
+| 🧪 [ruby-oauth/oauth2 on GitLab][📜src-gl]      | The Truth                                                         | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜wiki]              | 🏀 Tiny Matrix           | ➖                            |
+| 🧊 [ruby-oauth/oauth2 on CodeBerg][📜src-cb]    | An Ethical Mirror ([Donate][🤝cb-donate])                         | ➖                         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
+| 🐙 [ruby-oauth/oauth2 on GitHub][📜src-gh]      | A Dirty Mirror                                                    | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | ➖                         | 💯 Full Matrix           | ➖                            |
 | 🤼 [OAuth Ruby Google Group][⛳gg-discussions] | "Active"                                                          | ➖                         | ➖                        | ➖                         | ➖                        | [💚][⛳gg-discussions]        |
 | 🎮️ [Discord Server][✉️discord-invite]        | [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
@@ -37,8 +37,8 @@ This is a RubyGem for implementing OAuth 2.0 clients (not servers) in Ruby appli
 
 This project sits underneath a large portion of the authorization systems on the internet.
 According to GitHub's project tracking, which I believe only reports on public projects,
-[100,000+ projects](https://github.com/oauth-xx/oauth2/network/dependents), and
-[500+ packages](https://github.com/oauth-xx/oauth2/network/dependents?dependent_type=PACKAGE) depend on this project.
+[100,000+ projects](https://github.com/ruby-oauth/oauth2/network/dependents), and
+[500+ packages](https://github.com/ruby-oauth/oauth2/network/dependents?dependent_type=PACKAGE) depend on this project.
 
 That means it is painful for the Ruby community when this gem forces updates to its runtime dependencies.
 
@@ -59,10 +59,10 @@ covering the latest patch for each of the following minor versions:
 * gem `logger` @ v1.2, v1.5, v1.7, HEAD ⏩️ [ruby/logger](https://github.com/ruby/logger)
 * gem `multi_xml` @ v0.5, v0.6, v0.7, HEAD ⏩️ [sferik/multi_xml](https://github.com/sferik/multi_xml)
 * gem `rack` @ v1.2, v1.6, v2, v3, HEAD ⏩️ [rack/rack](https://github.com/rack/rack)
-* gem `snaky_hash` @ v2, HEAD ⏩️ [oauth-xx/snaky_hash](https://gitlab.com/oauth-xx/snaky_hash)
-* gem `version_gem` @ v1, HEAD ⏩️ [oauth-xx/version_gem](https://gitlab.com/oauth-xx/version_gem)
+* gem `snaky_hash` @ v2, HEAD ⏩️ [ruby-oauth/snaky_hash](https://gitlab.com/ruby-oauth/snaky_hash)
+* gem `version_gem` @ v1, HEAD ⏩️ [ruby-oauth/version_gem](https://gitlab.com/ruby-oauth/version_gem)
 
-The last two were extracted from this gem. They are part of the `oauth-xx` org,
+The last two were extracted from this gem. They are part of the `ruby-oauth` org,
 and are developed in tight collaboration with this gem.
 
 Also, where reasonable, tested against the runtime dependencies of those dependencies:
@@ -140,7 +140,7 @@ One of these might be what you are looking for:
 * [oauth sibling gem][sibling-gem] for OAuth 1.0 implementations in Ruby.
 
 [oauth2-spec]: https://oauth.net/2/
-[sibling-gem]: https://gitlab.com/oauth-xx/oauth
+[sibling-gem]: https://gitlab.com/ruby-oauth/oauth
 [doorkeeper-gem]: https://github.com/doorkeeper-gem/doorkeeper
 
 ## 💡 Info you can shake a stick at
@@ -184,33 +184,33 @@ One of these might be what you are looking for:
 | 2.0.0   | 2022-06-21   | [v2.0.0 CHANGELOG][2.0.0-changelog]   | [v2.0.0 README][2.0.0-readme]   |
 </details>
 
-[2.0.12-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#2012---2025-05-31
-[2.0.11-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#2011---2025-05-23
-[2.0.10-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#2010---2025-05-17
-[2.0.9-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#209---2022-09-16
-[2.0.8-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#208---2022-09-01
-[2.0.7-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#207---2022-08-22
-[2.0.6-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#206---2022-07-13
-[2.0.5-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#205---2022-07-07
-[2.0.4-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#204---2022-07-01
-[2.0.3-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#203---2022-06-28
-[2.0.2-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#202---2022-06-24
-[2.0.1-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#201---2022-06-22
-[2.0.0-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#200---2022-06-21
+[2.0.12-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#2012---2025-05-31
+[2.0.11-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#2011---2025-05-23
+[2.0.10-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#2010---2025-05-17
+[2.0.9-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#209---2022-09-16
+[2.0.8-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#208---2022-09-01
+[2.0.7-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#207---2022-08-22
+[2.0.6-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#206---2022-07-13
+[2.0.5-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#205---2022-07-07
+[2.0.4-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#204---2022-07-01
+[2.0.3-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#203---2022-06-28
+[2.0.2-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#202---2022-06-24
+[2.0.1-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#201---2022-06-22
+[2.0.0-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#200---2022-06-21
 
-[2.0.12-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.12/README.md
-[2.0.11-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.11/README.md
-[2.0.10-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.10/README.md
-[2.0.9-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.9/README.md
-[2.0.8-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.8/README.md
-[2.0.7-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.7/README.md
-[2.0.6-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.6/README.md
-[2.0.5-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.5/README.md
-[2.0.4-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.4/README.md
-[2.0.3-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.3/README.md
-[2.0.2-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.2/README.md
-[2.0.1-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.1/README.md
-[2.0.0-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v2.0.0/README.md
+[2.0.12-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.12/README.md
+[2.0.11-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.11/README.md
+[2.0.10-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.10/README.md
+[2.0.9-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.9/README.md
+[2.0.8-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.8/README.md
+[2.0.7-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.7/README.md
+[2.0.6-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.6/README.md
+[2.0.5-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.5/README.md
+[2.0.4-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.4/README.md
+[2.0.3-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.3/README.md
+[2.0.2-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.2/README.md
+[2.0.1-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.1/README.md
+[2.0.0-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v2.0.0/README.md
 
 ### Older Releases
 
@@ -233,39 +233,39 @@ One of these might be what you are looking for:
 | 1.4.0   | Jun 9, 2017  | [v1.4.0 CHANGELOG][1.4.0-changelog]   | [v1.4.0 README][1.4.0-readme]   |
 </details>
 
-[1.4.11-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#1411---2022-09-16
-[1.4.10-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#1410---2022-07-01
-[1.4.9-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#149---2022-02-20
-[1.4.8-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#148---2022-02-18
-[1.4.7-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#147---2021-03-19
-[1.4.6-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#146---2021-03-19
-[1.4.5-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#145---2021-03-18
-[1.4.4-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#144---2020-02-12
-[1.4.3-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#143---2020-01-29
-[1.4.2-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#142---2019-10-01
-[1.4.1-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#141---2018-10-13
-[1.4.0-changelog]: https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#140---2017-06-09
+[1.4.11-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#1411---2022-09-16
+[1.4.10-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#1410---2022-07-01
+[1.4.9-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#149---2022-02-20
+[1.4.8-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#148---2022-02-18
+[1.4.7-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#147---2021-03-19
+[1.4.6-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#146---2021-03-19
+[1.4.5-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#145---2021-03-18
+[1.4.4-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#144---2020-02-12
+[1.4.3-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#143---2020-01-29
+[1.4.2-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#142---2019-10-01
+[1.4.1-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#141---2018-10-13
+[1.4.0-changelog]: https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md?ref_type=heads#140---2017-06-09
 
-[1.4.11-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.11/README.md
-[1.4.10-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.10/README.md
-[1.4.9-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.9/README.md
-[1.4.8-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.8/README.md
-[1.4.7-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.7/README.md
-[1.4.6-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.6/README.md
-[1.4.5-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.5/README.md
-[1.4.4-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.4/README.md
-[1.4.3-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.3/README.md
-[1.4.2-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.2/README.md
-[1.4.1-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.1/README.md
-[1.4.0-readme]: https://gitlab.com/oauth-xx/oauth2/-/blob/v1.4.0/README.md
+[1.4.11-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.11/README.md
+[1.4.10-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.10/README.md
+[1.4.9-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.9/README.md
+[1.4.8-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.8/README.md
+[1.4.7-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.7/README.md
+[1.4.6-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.6/README.md
+[1.4.5-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.5/README.md
+[1.4.4-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.4/README.md
+[1.4.3-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.3/README.md
+[1.4.2-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.2/README.md
+[1.4.1-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.1/README.md
+[1.4.0-readme]: https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.4.0/README.md
 
 <details>
   <summary>1.3.x Readmes</summary>
 
 | Version  | Release Date | Readme                                                   |
 |----------|--------------|----------------------------------------------------------|
-| 1.3.1    | Mar 3, 2017  | https://gitlab.com/oauth-xx/oauth2/-/blob/v1.3.1/README.md |
-| 1.3.0    | Dec 27, 2016 | https://gitlab.com/oauth-xx/oauth2/-/blob/v1.3.0/README.md |
+| 1.3.1    | Mar 3, 2017  | https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.3.1/README.md |
+| 1.3.0    | Dec 27, 2016 | https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.3.0/README.md |
 </details>
 
 <details>
@@ -273,10 +273,10 @@ One of these might be what you are looking for:
 
 | Version  | Release Date | Readme                                                   |
 |----------|--------------|----------------------------------------------------------|
-| 1.2.0    | Jun 30, 2016 | https://gitlab.com/oauth-xx/oauth2/-/blob/v1.2.0/README.md |
-| 1.1.0    | Jan 30, 2016 | https://gitlab.com/oauth-xx/oauth2/-/blob/v1.1.0/README.md |
-| 1.0.0    | May 23, 2014 | https://gitlab.com/oauth-xx/oauth2/-/blob/v1.0.0/README.md |
-| < 1.0.0  | Find here    | https://gitlab.com/oauth-xx/oauth2/-/tags                  |
+| 1.2.0    | Jun 30, 2016 | https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.2.0/README.md |
+| 1.1.0    | Jan 30, 2016 | https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.1.0/README.md |
+| 1.0.0    | May 23, 2014 | https://gitlab.com/ruby-oauth/oauth2/-/blob/v1.0.0/README.md |
+| < 1.0.0  | Find here    | https://gitlab.com/ruby-oauth/oauth2/-/tags                  |
 </details>
 
 ## ✨ Installation
@@ -298,7 +298,7 @@ by following the instructions below.
 Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
 
 ```shell
-gem cert --add <(curl -Ls https://raw.github.com/oauth-xx/oauth2/main/certs/pboling.pem)
+gem cert --add <(curl -Ls https://raw.github.com/ruby-oauth/oauth2/main/certs/pboling.pem)
 ```
 
 You only need to do that once.  Then proceed to install with:
@@ -356,9 +356,9 @@ For more see [SECURITY.md][🔐security].
   - As of version 2.0.4 you can turn key transformation off with the `snaky: false` option.
 - By default, the `:auth_scheme` is now `:basic_auth` (instead of `:request_body`)
   - Third-party strategies and gems may need to be updated if a provider was requiring client id/secret in the request body
-- [... A lot more](https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md#200-2022-06-21-tag)
+- [... A lot more](https://gitlab.com/ruby-oauth/oauth2/-/blob/main/CHANGELOG.md#200-2022-06-21-tag)
 
-[snaky_hash]: https://gitlab.com/oauth-xx/snaky_hash
+[snaky_hash]: https://gitlab.com/ruby-oauth/snaky_hash
 
 ## Compatibility
 
@@ -528,7 +528,7 @@ These extensions work regardless of whether you used the global or discrete conf
 
 There are a few hacks you may need in your class to support Ruby < 2.4.2 or < 2.6.
 They are likely not needed if you are on a newer Ruby.
-See [response_spec.rb](https://github.com/oauth-xx/oauth2/blob/main/spec/oauth2/response_spec.rb) if you need to study the hacks for older Rubies.
+See [response_spec.rb](https://github.com/ruby-oauth/oauth2/blob/main/spec/oauth2/response_spec.rb) if you need to study the hacks for older Rubies.
 
 ```ruby
 class MySnakyHash < SnakyHash::StringKeyed
@@ -584,7 +584,7 @@ class MySnakyHash < SnakyHash::StringKeyed
 end
 ```
 
-See [response_spec.rb](https://github.com/oauth-xx/oauth2/blob/main/spec/oauth2/response_spec.rb), or the [oauth-xx/snaky_hash](https://gitlab.com/oauth-xx/snaky_hash) gem for more ideas.
+See [response_spec.rb](https://github.com/ruby-oauth/oauth2/blob/main/spec/oauth2/response_spec.rb), or the [ruby-oauth/snaky_hash](https://gitlab.com/ruby-oauth/snaky_hash) gem for more ideas.
 
 #### What if I hate snakes and/or indifference?
 
@@ -627,7 +627,7 @@ The `AccessToken` methods `#get`, `#post`, `#put` and `#delete` and the generic 
 will return an instance of the #OAuth2::Response class.
 
 This instance contains a `#parsed` method that will parse the response body and
-return a Hash-like [`SnakyHash::StringKeyed`](https://gitlab.com/oauth-xx/snaky_hash/-/blob/main/lib/snaky_hash/string_keyed.rb) if the `Content-Type` is `application/x-www-form-urlencoded` or if
+return a Hash-like [`SnakyHash::StringKeyed`](https://gitlab.com/ruby-oauth/snaky_hash/-/blob/main/lib/snaky_hash/string_keyed.rb) if the `Content-Type` is `application/x-www-form-urlencoded` or if
 the body is a JSON object.  It will return an Array if the body is a JSON
 array.  Otherwise, it will return the original body string.
 
@@ -657,11 +657,11 @@ Response instance will contain the `OAuth2::Error` instance.
 
 Currently, the Authorization Code, Implicit, Resource Owner Password Credentials, Client Credentials, and Assertion
 authentication grant types have helper strategy classes that simplify client
-use. They are available via the [`#auth_code`](https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/strategy/auth_code.rb),
-[`#implicit`](https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/strategy/implicit.rb),
-[`#password`](https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/strategy/password.rb),
-[`#client_credentials`](https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/strategy/client_credentials.rb), and
-[`#assertion`](https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/strategy/assertion.rb) methods respectively.
+use. They are available via the [`#auth_code`](https://gitlab.com/ruby-oauth/oauth2/-/blob/main/lib/oauth2/strategy/auth_code.rb),
+[`#implicit`](https://gitlab.com/ruby-oauth/oauth2/-/blob/main/lib/oauth2/strategy/implicit.rb),
+[`#password`](https://gitlab.com/ruby-oauth/oauth2/-/blob/main/lib/oauth2/strategy/password.rb),
+[`#client_credentials`](https://gitlab.com/ruby-oauth/oauth2/-/blob/main/lib/oauth2/strategy/client_credentials.rb), and
+[`#assertion`](https://gitlab.com/ruby-oauth/oauth2/-/blob/main/lib/oauth2/strategy/assertion.rb) methods respectively.
 
 These aren't full examples, but demonstrative of the differences between usage for each strategy.
 ```ruby
@@ -736,17 +736,17 @@ chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][�
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/oauth-xx/oauth2/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/ruby-oauth/oauth2/-/graphs/main][🚎contributors-gl]
 
 ## ⭐️ Star History
 
-<a href="https://star-history.com/#oauth-xx/oauth2&Date">
+<a href="https://star-history.com/#ruby-oauth/oauth2&Date">
  <picture>
      <source media="(prefers-color-scheme: dark)"
-             srcset="https://api.star-history.com/svg?repos=oauth-xx/oauth2&type=Date&theme=dark"/>
+             srcset="https://api.star-history.com/svg?repos=ruby-oauth/oauth2&type=Date&theme=dark"/>
      <source media="(prefers-color-scheme: light)"
-             srcset="https://api.star-history.com/svg?repos=oauth-xx/oauth2&type=Date"/>
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=oauth-xx/oauth2&type=Date" />
+             srcset="https://api.star-history.com/svg?repos=ruby-oauth/oauth2&type=Date"/>
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ruby-oauth/oauth2&type=Date" />
  </picture>
 </a>
 
@@ -801,7 +801,7 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
         <a href="https://discord.gg/3qme4XHNKN">
             Galtzo.com
             <picture>
-              <img src="https://github.com/oauth-xx/oauth2/raw/main/docs/images/logo/galtzo-floss-logos-wordless.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0" width="24">
+              <img src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/galtzo-floss-logos-wordless.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0" width="24">
             </picture>
         </a>, and oauth2 contributors
     </li>
@@ -846,7 +846,7 @@ P.S. Use the gem => Discord for help
 [⛳gg-discussions-img]: https://img.shields.io/badge/google-group-0093D0.svg?style=for-the-badge&logo=google&logoColor=orange
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: https://github.com/oauth-xx/oauth2
+[⛳️gem-namespace]: https://github.com/ruby-oauth/oauth2
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-OAuth2-brightgreen.svg?style=flat&logo=ruby&logoColor=white
 [⛳️gem-name]: https://rubygems.org/gems/oauth2
 [⛳️name-img]: https://img.shields.io/badge/name-oauth2-brightgreen.svg?style=flat&logo=rubygems&logoColor=red
@@ -884,59 +884,59 @@ P.S. Use the gem => Discord for help
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/oauth-xx/oauth2/
+[📜src-gl]: https://gitlab.com/ruby-oauth/oauth2/
 [📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
-[📜src-cb]: https://codeberg.org/oauth-xx/oauth2
+[📜src-cb]: https://codeberg.org/ruby-oauth/oauth2
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/oauth-xx/oauth2
+[📜src-gh]: https://github.com/ruby-oauth/oauth2
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜wiki]: https://gitlab.com/oauth-xx/oauth2/-/wikis/home
+[📜wiki]: https://gitlab.com/ruby-oauth/oauth2/-/wikis/home
 [📜wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=Wiki&logoColor=white
 [👽dl-rank]: https://rubygems.org/gems/oauth2
 [👽dl-ranki]: https://img.shields.io/gem/rd/oauth2.svg
-[👽oss-help]: https://www.codetriage.com/oauth-xx/oauth2
-[👽oss-helpi]: https://www.codetriage.com/oauth-xx/oauth2/badges/users.svg
+[👽oss-help]: https://www.codetriage.com/ruby-oauth/oauth2
+[👽oss-helpi]: https://www.codetriage.com/ruby-oauth/oauth2/badges/users.svg
 [👽version]: https://rubygems.org/gems/oauth2
 [👽versioni]: https://img.shields.io/gem/v/oauth2.svg
-[🔑qlty-mnt]: https://qlty.sh/gh/oauth-xx/projects/oauth2
+[🔑qlty-mnt]: https://qlty.sh/gh/ruby-oauth/projects/oauth2
 [🔑qlty-mnti♻️]: https://qlty.sh/badges/d3370c2c-8791-4202-9759-76f527f76005/maintainability.svg
-[🔑qlty-cov]: https://qlty.sh/gh/oauth-xx/projects/oauth2
+[🔑qlty-cov]: https://qlty.sh/gh/ruby-oauth/projects/oauth2
 [🔑qlty-covi♻️]: https://qlty.sh/badges/d3370c2c-8791-4202-9759-76f527f76005/test_coverage.svg
-[🔑codecov]: https://codecov.io/gh/oauth-xx/oauth2
-[🔑codecovi♻️]: https://codecov.io/gh/oauth-xx/oauth2/graph/badge.svg?token=bNqSzNiuo2
-[🔑coveralls]: https://coveralls.io/github/oauth-xx/oauth2?branch=main
-[🔑coveralls-img]: https://coveralls.io/repos/github/oauth-xx/oauth2/badge.svg?branch=main
-[🔑depfu]: https://depfu.com/github/oauth-xx/oauth2?project_id=5884
+[🔑codecov]: https://codecov.io/gh/ruby-oauth/oauth2
+[🔑codecovi♻️]: https://codecov.io/gh/ruby-oauth/oauth2/graph/badge.svg?token=bNqSzNiuo2
+[🔑coveralls]: https://coveralls.io/github/ruby-oauth/oauth2?branch=main
+[🔑coveralls-img]: https://coveralls.io/repos/github/ruby-oauth/oauth2/badge.svg?branch=main
+[🔑depfu]: https://depfu.com/github/ruby-oauth/oauth2?project_id=5884
 [🔑depfui♻️]: https://badges.depfu.com/badges/6d34dc1ba682bbdf9ae2a97848241743/count.svg
-[🖐codeQL]: https://github.com/oauth-xx/oauth2/security/code-scanning
-[🖐codeQL-img]: https://github.com/oauth-xx/oauth2/actions/workflows/codeql-analysis.yml/badge.svg
-[🚎1-an-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/ancient.yml
-[🚎1-an-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/ancient.yml/badge.svg
-[🚎2-cov-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/coverage.yml
-[🚎2-cov-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/coverage.yml/badge.svg
-[🚎3-hd-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/heads.yml
-[🚎3-hd-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/heads.yml/badge.svg
-[🚎4-lg-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/legacy.yml
-[🚎4-lg-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/legacy.yml/badge.svg
-[🚎5-st-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/style.yml
-[🚎5-st-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/style.yml/badge.svg
-[🚎6-s-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/supported.yml
-[🚎6-s-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/supported.yml/badge.svg
-[🚎7-us-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/unsupported.yml
-[🚎7-us-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/unsupported.yml/badge.svg
-[🚎8-ho-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/hoary.yml
-[🚎8-ho-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/hoary.yml/badge.svg
-[🚎9-t-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/truffle.yml
-[🚎9-t-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/truffle.yml/badge.svg
-[🚎10-j-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/jruby.yml
-[🚎10-j-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/jruby.yml/badge.svg
-[🚎11-c-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/current.yml
-[🚎11-c-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/current.yml/badge.svg
-[🚎12-crh-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/current-runtime-heads.yml
-[🚎12-crh-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/current-runtime-heads.yml/badge.svg
-[🚎13-cbs-wf]: https://github.com/oauth-xx/oauth2/actions/workflows/caboose.yml
-[🚎13-cbs-wfi]: https://github.com/oauth-xx/oauth2/actions/workflows/caboose.yml/badge.svg
+[🖐codeQL]: https://github.com/ruby-oauth/oauth2/security/code-scanning
+[🖐codeQL-img]: https://github.com/ruby-oauth/oauth2/actions/workflows/codeql-analysis.yml/badge.svg
+[🚎1-an-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/ancient.yml
+[🚎1-an-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/ancient.yml/badge.svg
+[🚎2-cov-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/heads.yml/badge.svg
+[🚎4-lg-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/legacy.yml
+[🚎4-lg-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/legacy.yml/badge.svg
+[🚎5-st-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/style.yml/badge.svg
+[🚎6-s-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/supported.yml
+[🚎6-s-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/supported.yml/badge.svg
+[🚎7-us-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/unsupported.yml
+[🚎7-us-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/unsupported.yml/badge.svg
+[🚎8-ho-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/hoary.yml
+[🚎8-ho-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/hoary.yml/badge.svg
+[🚎9-t-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/current-runtime-heads.yml
+[🚎12-crh-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/current-runtime-heads.yml/badge.svg
+[🚎13-cbs-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/caboose.yml
+[🚎13-cbs-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/caboose.yml/badge.svg
 [💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
@@ -959,19 +959,19 @@ P.S. Use the gem => Discord for help
 [💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
-[🤝gh-issues]: https://github.com/oauth-xx/oauth2/issues
-[🤝gh-pulls]: https://github.com/oauth-xx/oauth2/pulls
-[🤝gl-issues]: https://gitlab.com/oauth-xx/oauth2/-/issues
-[🤝gl-pulls]: https://gitlab.com/oauth-xx/oauth2/-/merge_requests
-[🤝cb-issues]: https://codeberg.org/oauth-xx/oauth2/issues
-[🤝cb-pulls]: https://codeberg.org/oauth-xx/oauth2/pulls
+[🤝gh-issues]: https://github.com/ruby-oauth/oauth2/issues
+[🤝gh-pulls]: https://github.com/ruby-oauth/oauth2/pulls
+[🤝gl-issues]: https://gitlab.com/ruby-oauth/oauth2/-/issues
+[🤝gl-pulls]: https://gitlab.com/ruby-oauth/oauth2/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/ruby-oauth/oauth2/issues
+[🤝cb-pulls]: https://codeberg.org/ruby-oauth/oauth2/pulls
 [🤝cb-donate]: https://donate.codeberg.org/
 [🤝contributing]: CONTRIBUTING.md
-[🔑codecov-g♻️]: https://codecov.io/gh/oauth-xx/oauth2/graphs/tree.svg?token=bNqSzNiuo2
+[🔑codecov-g♻️]: https://codecov.io/gh/ruby-oauth/oauth2/graphs/tree.svg?token=bNqSzNiuo2
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/oauth-xx/oauth2/graphs/contributors
-[🖐contributors-img]: https://contrib.rocks/image?repo=oauth-xx/oauth2
-[🚎contributors-gl]: https://gitlab.com/oauth-xx/oauth2/-/graphs/main
+[🖐contributors]: https://github.com/ruby-oauth/oauth2/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=ruby-oauth/oauth2
+[🚎contributors-gl]: https://gitlab.com/ruby-oauth/oauth2/-/graphs/main
 [🪇conduct]: CODE_OF_CONDUCT.md
 [🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
@@ -997,7 +997,7 @@ P.S. Use the gem => Discord for help
 [🚎yard-current]: http://rubydoc.info/gems/oauth2
 [🚎yard-head]: https://oauth2.galtzo.com
 [💎stone_checksums]: https://github.com/pboling/stone_checksums
-[💎SHA_checksums]: https://gitlab.com/oauth-xx/oauth2/-/tree/main/checksums
+[💎SHA_checksums]: https://gitlab.com/ruby-oauth/oauth2/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_%26_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
 [💎d-in-dvcs]: https://railsbling.com/posts/dvcs/put_the_d_in_dvcs/
@@ -1009,4 +1009,14 @@ P.S. Use the gem => Discord for help
 
 <a rel="me" alt="Follow me on Ruby.social" href="https://ruby.social/@galtzo"><img src="https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=social&label=Follow%20%40galtzo%20on%20Ruby.social"></a>
 <a rel="me" alt="Follow me on FLOSS.social" href="https://floss.social/@galtzo"><img src="https://img.shields.io/mastodon/follow/110304921404405715?domain=https%3A%2F%2Ffloss.social&style=social&label=Follow%20%40galtzo%20on%20Floss.social"></a>
+
+</details>
+
+
+<details>
+  <summary>Broken badges</summary>
+
+[![CodeCov Test Coverage][🔑codecovi♻️]][🔑codecov]
+[![Coverage Graph][🔑codecov-g♻️]][🔑codecov]
+
 </details>
