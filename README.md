@@ -76,6 +76,7 @@ covering the latest patch for each of the following minor versions:
 |------------------------------------------------|--------------------------------------------------------------------------------------|
 | 👟 Check it out!                               | ✨ [github.com/appraisal-rb/appraisal2](https://github.com/appraisal-rb/appraisal2) ✨ |
 
+* Operating Systems: Linux, MacOS, Windows
 * MRI Ruby @ v2.3, v2.4, v2.5, v2.6, v2.7, v3.0, v3.1, v3.2, v3.3, v3.4, HEAD
   * NOTE: This gem will still install on ruby v2.2, but vanilla GitHub Actions no longer supports testing against it, so YMMV.
 * JRuby @ v9.2, v9.3, v9.4, v10.0, HEAD
@@ -851,7 +852,7 @@ or one of the smaller ones, depending on button size preference.
 
 [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
-P.S. If you need help️, or want to say thanks, 👇 Join the Discord.
+P.S. If you need help️ or want to say thanks, 👇 Join the Discord.
 
 [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite]
 

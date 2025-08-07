@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 require "bundler/gem_tasks"
 
 defaults = []
 
-# See: https://docs.gitlab.com/ci/variables/predefined_variables/
-is_gitlab = ENV.fetch("GITLAB_CI", "false").casecmp("true") == 0
+is_ci = ENV.fetch("CI", "false").casecmp("true") == 0
 
 ### DEVELOPMENT TASKS
 # Setup Kettle Soup Cover
@@ -42,7 +43,8 @@ begin
   require "rspec/core/rake_task"
 
   RSpec::Core::RakeTask.new(:spec)
-  defaults << "spec"
+  # This takes the place of `coverage` task when running as CI=true
+  defaults << "spec" if !defined?(Kettle::Soup::Cover) || Kettle::Soup::Cover::IS_CI
 rescue LoadError
   desc("spec task stub")
   task(:spec) do
@@ -99,7 +101,7 @@ begin
     t.verbose = false
     t.source_files = "{lib,spec}/**/*.rb"
   end
-  defaults << "reek" unless is_gitlab
+  defaults << "reek" unless is_ci
 rescue LoadError
   desc("(stub) reek is unavailable")
   task(:reek) do
