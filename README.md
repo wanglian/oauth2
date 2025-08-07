@@ -753,7 +753,8 @@ See [CONTRIBUTING.md][🤝contributing].
 ### Code Coverage
 
 [![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls]
-[![QLTY Test Coverage][🔑qlty-covi♻️]][🔑qlty-cov]
+
+[![QLTY Test Coverage][🔑qlty-covi]][🔑qlty-cov]
 
 ### 🪇 Code of Conduct
 
