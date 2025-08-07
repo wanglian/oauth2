@@ -80,10 +80,11 @@ Thanks, |7eter l-|. l3oling
   spec.metadata["changelog_uri"] = "#{gl_homepage}/-/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{gl_homepage}/-/issues"
   spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
-  spec.metadata["wiki_uri"] = "#{gl_homepage}/-/wiki"
   spec.metadata["mailing_list_uri"] = "https://groups.google.com/g/oauth-ruby"
   spec.metadata["funding_uri"] = "https://github.com/sponsors/pboling"
+  spec.metadata["wiki_uri"] = "#{gl_homepage}/-/wiki"
   spec.metadata["news_uri"] = "https://www.railsbling.com/tags/#{spec.name}"
+  spec.metadata["discord_uri"] = "https://discord.gg/3qme4XHNKN"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.
@@ -126,6 +127,20 @@ Thanks, |7eter l-|. l3oling
   spec.add_dependency("rack", [">= 1.2", "< 4"])          # Ruby >= 0
   spec.add_dependency("snaky_hash", "~> 2.0", ">= 2.0.3") # Ruby >= 2.2
   spec.add_dependency("version_gem", ">= 1.1.8", "< 3")   # Ruby >= 2.2
+
+  # NOTE: It is preferable to list development dependencies in the gemspec due to increased
+  #       visibility and discoverability on RubyGems.org.
+  #       However, development dependencies in gemspec will install on
+  #       all versions of Ruby that will run in CI.
+  #       This gem, and its runtime dependencies, will install on Ruby down to 2.2.
+  #       This gem, and its development dependencies, will install on Ruby down to 2.3.
+  #       This is because in CI easy installation of Ruby, via setup-ruby, is for >= 2.3.
+  #       Thus, dev dependencies in gemspec must have
+  #
+  #       required_ruby_version ">= 2.3" (or lower)
+  #
+  #       Development dependencies that require strictly newer Ruby versions should be in a "gemfile",
+  #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   spec.add_development_dependency("addressable", "~> 2.8", ">= 2.8.7")  # ruby >= 2.2
   spec.add_development_dependency("appraisal2", "~> 3.0")               # ruby >= 1.8.7
