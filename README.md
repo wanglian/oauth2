@@ -1,14 +1,11 @@
-<p align="center">
-    <a href="https://discord.gg/3qme4XHNKN" target="_blank" rel="noopener">
-      <img width="124px" src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/galtzo-floss-logos-original.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
-    </a>
-    <a href="http://oauth.net/2/" target="_blank" rel="noopener">
-      <img src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/oauth2-logo-124px.png?raw=true" alt="OAuth 2.0 Logo by Chris Messina, CC BY-SA 3.0">
-    </a>
-    <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
-      <img width="124px" src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/ruby-logo-198px.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5">
-    </a>
-</p>
+[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-i]][🖼️galtzo-discord] [![oauth2 Logo by Chris Messina, CC BY-SA 3.0][🖼️oauth2-i]][🖼️oauth2] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang]
+
+[🖼️galtzo-i]: https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg
+[🖼️galtzo-discord]: https://discord.gg/3qme4XHNKN
+[🖼️oauth2-i]: https://logos.galtzo.com/assets/images/oauth/oauth2/avatar-192px.svg
+[🖼️oauth2]: https://oauth.net/
+[🖼️ruby-lang-i]: https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg
+[🖼️ruby-lang]: https://github.com/ruby-lang
 
 ## 🔐 OAuth2
 
@@ -50,6 +47,10 @@ What does that mean specifically for the runtime dependencies?
 We have 100% test coverage of lines and branches, and this test suite runs across a large matrix
 covering the latest patch for each of the following minor versions:
 
+| 🚚 _Amazing_ test matrix was brought to you by | 🔎 appraisal2 🔎                                                                     |
+|------------------------------------------------|--------------------------------------------------------------------------------------|
+| 👟 Check it out!                               | ✨ [github.com/appraisal-rb/appraisal2](https://github.com/appraisal-rb/appraisal2) ✨ |
+
 * MRI Ruby @ v2.3, v2.4, v2.5, v2.6, v2.7, v3.0, v3.1, v3.2, v3.3, v3.4, HEAD
   * NOTE: This gem will still install on ruby v2.2, but vanilla GitHub Actions no longer supports testing against it, so YMMV.
 * JRuby @ v9.2, v9.3, v9.4, v10.0, HEAD
@@ -81,12 +82,6 @@ Also, where reasonable, tested against the runtime dependencies of those depende
 
 \* MIT license; I am unable to make guarantees.
 
-| 🚚 Test matrix brought to you by | 🔎 appraisal++                                                          |
-|----------------------------------|-------------------------------------------------------------------------|
-| Adds back support for old Rubies | ✨ [appraisal PR #250](https://github.com/thoughtbot/appraisal/pull/250) |
-| Adds support for `eval_gemfile`  | ✨ [appraisal PR #248](https://github.com/thoughtbot/appraisal/pull/248) |
-| Please review                    | my PRs!                                                                 |
-
 <details>
   <summary>Standard Library Dependencies</summary>
 
@@ -98,7 +93,7 @@ The various versions of each are tested via the Ruby test matrix, along with wha
 * time
 * logger (removed from stdlib in Ruby 3.5 so added as runtime dependency in v2.0.10)
 
-If you use a gem version it should work fine!
+If you use a gem version of a core Ruby library it should work fine!
 
 </details>
 
@@ -785,7 +780,7 @@ For example:
 spec.add_dependency("oauth2", "~> 2.0")
 ```
 
-See [CHANGELOG.md][📌changelog] for a list of releases.
+See [CHANGELOG.md][📌changelog] for list of releases.
 
 ## 📄 License
 
@@ -801,7 +796,7 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
         <a href="https://discord.gg/3qme4XHNKN">
             Galtzo.com
             <picture>
-              <img src="https://github.com/ruby-oauth/oauth2/raw/main/docs/images/logo/galtzo-floss-logos-wordless.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0" width="24">
+              <img src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px-blank.svg" alt="Galtzo.com Logo (Wordless) by Aboling0, CC BY-SA 4.0" width="24">
             </picture>
         </a>, and oauth2 contributors
     </li>
@@ -822,7 +817,7 @@ or one of smaller ones, depending on button size preference.
 
 [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
-P.S. Use the gem => Discord for help
+P.S. If you need help️, or want to say thanks, 👇 Join the Discord.
 
 [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite]
 
@@ -937,6 +932,10 @@ P.S. Use the gem => Discord for help
 [🚎12-crh-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/current-runtime-heads.yml/badge.svg
 [🚎13-cbs-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/caboose.yml
 [🚎13-cbs-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/caboose.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_locked.yml
+[🚎13-🔒️-wfi]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_locked.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_unlocked.yml
+[🚎14-🔓️-wfi]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_unlocked.yml/badge.svg
 [💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
@@ -996,7 +995,7 @@ P.S. Use the gem => Discord for help
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-259D6C.svg?style=flat
 [🚎yard-current]: http://rubydoc.info/gems/oauth2
 [🚎yard-head]: https://oauth2.galtzo.com
-[💎stone_checksums]: https://github.com/pboling/stone_checksums
+[💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
 [💎SHA_checksums]: https://gitlab.com/ruby-oauth/oauth2/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_%26_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white

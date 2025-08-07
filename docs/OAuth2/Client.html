@@ -2478,10 +2478,10 @@ requesting client.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_revoke_token'>revoke_token</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_token_type_hint'>token_type_hint</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:token_method</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='symbol'>:post_with_query_string</span>
+  <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:token</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_token'>token</span>
+  <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:token_type_hint</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_token_type_hint'>token_type_hint</span> <span class='kw'>if</span> <span class='id identifier rubyid_token_type_hint'>token_type_hint</span>
+
   <span class='id identifier rubyid_req_opts'>req_opts</span> <span class='op'>=</span> <span class='id identifier rubyid_params_to_req_opts'>params_to_req_opts</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_req_opts'>req_opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_req_opts'>req_opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:token</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_token'>token</span>
-  <span class='id identifier rubyid_req_opts'>req_opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:token_type_hint</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_token_type_hint'>token_type_hint</span> <span class='kw'>if</span> <span class='id identifier rubyid_token_type_hint'>token_type_hint</span>
 
   <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_http_method'>http_method</span><span class='comma'>,</span> <span class='id identifier rubyid_revoke_url'>revoke_url</span><span class='comma'>,</span> <span class='id identifier rubyid_req_opts'>req_opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2651,9 +2651,9 @@ requesting client.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Jun  8 17:46:22 2025 by
+  Generated on Wed Aug  6 20:16:37 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.4.3).
+  0.9.37 (ruby-3.4.5).
 </div>
 
     </div>
