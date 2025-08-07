@@ -9,26 +9,51 @@
 
 ## 🔐 OAuth2
 
-[![Version][👽versioni]][👽version] [![License: MIT][📄license-img]][📄license-ref] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![Open Source Helpers][👽oss-helpi]][👽oss-help] [![Depfu][🔑depfui♻️]][🔑depfu] [![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls] [![QLTY Test Coverage][🔑qlty-covi♻️]][🔑qlty-cov] [![QLTY Maintainability][🔑qlty-mnti♻️]][🔑qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![CI Supported][🚎6-s-wfi]][🚎6-s-wf] [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf] [![CI Unsupported][🚎7-us-wfi]][🚎7-us-wf] [![CI Ancient][🚎1-an-wfi]][🚎1-an-wf] [![CI Caboose is an absolute WAGON][🚎13-cbs-wfi]][🚎13-cbs-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL]
+[![Version][👽versioni]][👽version] [![License: MIT][📄license-img]][📄license-ref] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![Open Source Helpers][👽oss-helpi]][👽oss-help] [![Depfu][🔑depfui♻️]][🔑depfu] [![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls] [![QLTY Test Coverage][🔑qlty-covi]][🔑qlty-cov] [![QLTY Maintainability][🔑qlty-mnti]][🔑qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![CI Supported][🚎6-s-wfi]][🚎6-s-wf] [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf] [![CI Unsupported][🚎7-us-wfi]][🚎7-us-wf] [![CI Ancient][🚎1-an-wfi]][🚎1-an-wf] [![CI Caboose is an absolute WAGON][🚎13-cbs-wfi]][🚎13-cbs-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL]
 
 ---
 
 [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
----
+## 🌻 Synopsis
 
 OAuth 2.0 is the industry-standard protocol for authorization.
 OAuth 2.0 focuses on client developer simplicity while providing specific authorization flows for web applications,
     desktop applications, mobile phones, and living room devices.
 This is a RubyGem for implementing OAuth 2.0 clients (not servers) in Ruby applications.
 
-| Federated [DVCS][💎d-in-dvcs] Repository      | Status                                                            | Issues                    | PRs                      | Wiki                      | CI                       | Discussions                  |
-|-----------------------------------------------|-------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [ruby-oauth/oauth2 on GitLab][📜src-gl]      | The Truth                                                         | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜wiki]              | 🏀 Tiny Matrix           | ➖                            |
-| 🧊 [ruby-oauth/oauth2 on CodeBerg][📜src-cb]    | An Ethical Mirror ([Donate][🤝cb-donate])                         | ➖                         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
-| 🐙 [ruby-oauth/oauth2 on GitHub][📜src-gh]      | A Dirty Mirror                                                    | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | ➖                         | 💯 Full Matrix           | ➖                            |
-| 🤼 [OAuth Ruby Google Group][⛳gg-discussions] | "Active"                                                          | ➖                         | ➖                        | ➖                         | ➖                        | [💚][⛳gg-discussions]        |
-| 🎮️ [Discord Server][✉️discord-invite]        | [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
+### Quick Example
+
+<details>
+  <summary>Convert the following `curl` command into a token request using this gem...</summary>
+
+```shell
+curl --request POST \
+  --url 'https://login.microsoftonline.com/REDMOND_REDACTED/oauth2/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data grant_type=client_credentials \
+  --data client_id=REDMOND_CLIENT_ID \
+  --data client_secret=REDMOND_CLIENT_SECRET \
+  --data resource=REDMOND_RESOURCE_UUID
+```
+
+NOTE: In the ruby version below, certain params are passed to the `get_token` call, instead of the client creation.
+
+```ruby
+OAuth2::Client.new(
+  "REDMOND_CLIENT_ID", # client_id
+  "REDMOND_CLIENT_SECRET", # client_secret
+  auth_scheme: :request_body, # Other modes are supported: :basic_auth, :tls_client_auth, :private_key_jwt
+  token_url: "oauth2/token", # relative path, except with leading `/`, then absolute path
+  site: "https://login.microsoftonline.com/REDMOND_REDACTED",
+). # The base path for token_url when it is relative
+  client_credentials. # There are many other types to choose from!
+  get_token(resource: "REDMOND_RESOURCE_UUID")
+```
+
+NOTE: `header` - The content type specified in the `curl` is already the default!
+
+</details>
 
 ### Upgrading Runtime Gem Dependencies
 
@@ -80,7 +105,7 @@ Also, where reasonable, tested against the runtime dependencies of those depende
 
 [sv-pub-api]: #-is-platform-support-part-of-the-public-api
 
-\* MIT license; I am unable to make guarantees.
+\* MIT license; The only guarantees I make are for enterprise support.
 
 <details>
   <summary>Standard Library Dependencies</summary>
@@ -97,38 +122,7 @@ If you use a gem version of a core Ruby library it should work fine!
 
 </details>
 
-### Quick Usage Example for AI and Copy / Pasting
-
-Convert the following `curl` command into a token request using this gem...
-
-```shell
-curl --request POST \
-  --url 'https://login.microsoftonline.com/REDMOND_REDACTED/oauth2/token' \
-  --header 'content-type: application/x-www-form-urlencoded' \
-  --data grant_type=client_credentials \
-  --data client_id=REDMOND_CLIENT_ID \
-  --data client_secret=REDMOND_CLIENT_SECRET \
-  --data resource=REDMOND_RESOURCE_UUID
-```
-
-NOTE: In the ruby version below, certain params are passed to the `get_token` call, instead of the client creation.
-
-```ruby
-OAuth2::Client.new(
-  "REDMOND_CLIENT_ID", # client_id
-  "REDMOND_CLIENT_SECRET", # client_secret
-  auth_scheme: :request_body, # Other modes are supported: :basic_auth, :tls_client_auth, :private_key_jwt
-  token_url: "oauth2/token", # relative path, except with leading `/`, then absolute path
-  site: "https://login.microsoftonline.com/REDMOND_REDACTED",
-). # The base path for token_url when it is relative
-  client_credentials. # There are many other types to choose from!
-  get_token(resource: "REDMOND_RESOURCE_UUID")
-```
-
-NOTE: `header` - The content type specified in the `curl` is already the default!
-
-If any of the above makes you uncomfortable, you may be in the wrong place.
-One of these might be what you are looking for:
+If it seems like you are in the wrong place, you might try one of these:
 
 * [OAuth 2.0 Spec][oauth2-spec]
 * [doorkeeper gem][doorkeeper-gem] for OAuth 2.0 server/provider implementation.
@@ -139,6 +133,42 @@ One of these might be what you are looking for:
 [doorkeeper-gem]: https://github.com/doorkeeper-gem/doorkeeper
 
 ## 💡 Info you can shake a stick at
+
+### Federated DVCS
+
+<details>
+  <summary>Find this repo on other forges</summary>
+
+| Federated [DVCS][💎d-in-dvcs] Repository      | Status                                                            | Issues                    | PRs                      | Wiki                      | CI                       | Discussions                  |
+|-----------------------------------------------|-------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
+| 🧪 [ruby-oauth/oauth2 on GitLab][📜src-gl]      | The Truth                                                         | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜wiki]              | 🏀 Tiny Matrix           | ➖                            |
+| 🧊 [ruby-oauth/oauth2 on CodeBerg][📜src-cb]    | An Ethical Mirror ([Donate][🤝cb-donate])                         | ➖                         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
+| 🐙 [ruby-oauth/oauth2 on GitHub][📜src-gh]      | A Dirty Mirror                                                    | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | ➖                         | 💯 Full Matrix           | ➖                            |
+| 🤼 [OAuth Ruby Google Group][⛳gg-discussions] | "Active"                                                          | ➖                         | ➖                        | ➖                         | ➖                        | [💚][⛳gg-discussions]        |
+| 🎮️ [Discord Server][✉️discord-invite]        | [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
+
+</details>
+
+[gh-discussions]: https://github.com/ruby-oauth/oauth2/discussions
+
+### Enterprise Support
+
+<details>
+  <summary>Need enterprise-level guarantees?</summary>
+
+[![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]
+
+- 💡Subscribe for support guarantees covering _all_ FLOSS dependencies
+- 💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]
+- 💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers
+
+Alternatively:
+
+- [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite]
+- [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork]
+- [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]
+
+</details>
 
 | Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -151,8 +181,7 @@ One of these might be what you are looking for:
 | Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver]                                                                                                                                                                                                                    |
 | Style                   | [![Enforced Code Style Linter][💎rlts-img]][💎rlts] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji]                                                                                                                                                                                                                                                                                              |
 | Support                 | [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                       |
-| Enterprise Support      | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers! |
-| Comrade BDFL 🎖️        | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact BDFL][🚂bdfl-contact-img]][🚂bdfl-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                                                                                                                                                              |
+| Maintainer 🎖️          | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact BDFL][🚂bdfl-contact-img]][🚂bdfl-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                                                                                                                                                              |
 | `...` 💖                | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme] [🧊][💖🧊berg] [🐙][💖🐙hub]  [🛖][💖🛖hut] [🧪][💖🧪lab]                                                                                                                                                                   |
 
 ## 🚀 Release Documentation
@@ -286,19 +315,22 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ### 🔒 Secure Installation
 
+<details>
+  <summary>For Medium or High Security Installations</summary>
+
 `oauth2` is cryptographically signed, and has verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
 [stone_checksums][💎stone_checksums]. Be sure the gem you install hasn’t been tampered with
 by following the instructions below.
 
 Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
 
-```shell
+```console
 gem cert --add <(curl -Ls https://raw.github.com/ruby-oauth/oauth2/main/certs/pboling.pem)
 ```
 
 You only need to do that once.  Then proceed to install with:
 
-```shell
+```console
 gem install oauth2 -P MediumSecurity
 ```
 
@@ -308,11 +340,13 @@ This is necessary because not all of `oauth2`’s dependencies are signed, so we
 
 If you want to up your security game full-time:
 
-```shell
+```console
 bundle config set --global trust-policy MediumSecurity
 ```
 
 NOTE: Be prepared to track down certs for signed gems and add them the same way you added mine.
+
+</details>
 
 ## OAuth2 for Enterprise
 
@@ -338,7 +372,7 @@ For more see [SECURITY.md][🔐security].
 - Support IETF rfc7523 JWT Bearer Tokens (since v2.0.0)
 - Support IETF rfc7231 Relative Location in Redirect (since v2.0.0)
 - Support IETF rfc6749 Don't set oauth params when nil (since v2.0.0)
-- Support IETF rfc7009 Token Revocation (since v2.0.10)
+- Support IETF rfc7009 Token Revocation (since v2.0.10, updated in v2.0.13)
 - Support [OIDC 1.0 Private Key JWT](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication); based on the OAuth JWT assertion specification [(RFC 7523)](https://tools.ietf.org/html/rfc7523)
 - Support new formats, including from [jsonapi.org](http://jsonapi.org/format/): `application/vdn.api+json`, `application/vnd.collection+json`, `application/hal+json`, `application/problem+json`
 - Adds option to `OAuth2::Client#get_token`:
@@ -780,7 +814,7 @@ For example:
 spec.add_dependency("oauth2", "~> 2.0")
 ```
 
-See [CHANGELOG.md][📌changelog] for list of releases.
+See [CHANGELOG.md][📌changelog] for a list of releases.
 
 ## 📄 License
 
@@ -811,7 +845,7 @@ Having arrived at the bottom of the page, please endure a final supplication.
 The primary maintainer of this gem, Peter Boling, wants
 Ruby to be a great place for people to solve problems, big and small.
 Please consider supporting his efforts via the giant yellow link below,
-or one of smaller ones, depending on button size preference.
+or one of the smaller ones, depending on button size preference.
 
 [![Buy me a latte][🖇buyme-img]][🖇buyme]
 
@@ -895,9 +929,9 @@ P.S. If you need help️, or want to say thanks, 👇 Join the Discord.
 [👽version]: https://rubygems.org/gems/oauth2
 [👽versioni]: https://img.shields.io/gem/v/oauth2.svg
 [🔑qlty-mnt]: https://qlty.sh/gh/ruby-oauth/projects/oauth2
-[🔑qlty-mnti♻️]: https://qlty.sh/badges/d3370c2c-8791-4202-9759-76f527f76005/maintainability.svg
-[🔑qlty-cov]: https://qlty.sh/gh/ruby-oauth/projects/oauth2
-[🔑qlty-covi♻️]: https://qlty.sh/badges/d3370c2c-8791-4202-9759-76f527f76005/test_coverage.svg
+[🔑qlty-mnti]: https://qlty.sh/gh/ruby-oauth/projects/oauth2/maintainability.svg
+[🔑qlty-cov]: https://qlty.sh/gh/ruby-oauth/projects/oauth2/metrics/code?sort=coverageRating
+[🔑qlty-covi]: https://qlty.sh/gh/ruby-oauth/projects/oauth2/coverage.svg
 [🔑codecov]: https://codecov.io/gh/ruby-oauth/oauth2
 [🔑codecovi♻️]: https://codecov.io/gh/ruby-oauth/oauth2/graph/badge.svg?token=bNqSzNiuo2
 [🔑coveralls]: https://coveralls.io/github/ruby-oauth/oauth2?branch=main
@@ -932,10 +966,10 @@ P.S. If you need help️, or want to say thanks, 👇 Join the Discord.
 [🚎12-crh-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/current-runtime-heads.yml/badge.svg
 [🚎13-cbs-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/caboose.yml
 [🚎13-cbs-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/caboose.yml/badge.svg
-[🚎13-🔒️-wf]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_locked.yml
-[🚎13-🔒️-wfi]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_locked.yml/badge.svg
-[🚎14-🔓️-wf]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_unlocked.yml
-[🚎14-🔓️-wfi]: https://github.com/galtzo-floss/rspec-stubbed_env/actions/workflows/deps_unlocked.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/deps_locked.yml
+[🚎13-🔒️-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/deps_locked.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/ruby-oauth/oauth2/actions/workflows/deps_unlocked.yml
+[🚎14-🔓️-wfi]: https://github.com/ruby-oauth/oauth2/actions/workflows/deps_unlocked.yml/badge.svg
 [💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
