@@ -1,0 +1,8 @@
+gem "mutex_m", ">= 0.2"
+gem "stringio", ">= 3.0"
+eval_gemfile "faraday_v2.gemfile"
+eval_gemfile "hashie_v5.gemfile"
+eval_gemfile "jwt_v3.gemfile"
+eval_gemfile "logger_v1_7.gemfile"
+eval_gemfile "multi_xml_v0_7.gemfile"
+eval_gemfile "rack_v3.gemfile"

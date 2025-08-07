@@ -105,7 +105,7 @@ Also, where reasonable, tested against the runtime dependencies of those depende
 
 [sv-pub-api]: #-is-platform-support-part-of-the-public-api
 
-\* MIT license; The only guarantees I make are for enterprise support.
+\* MIT license; The only guarantees I make are for [enterprise support](#enterprise-support).
 
 <details>
   <summary>Standard Library Dependencies</summary>
