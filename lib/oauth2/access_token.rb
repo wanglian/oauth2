@@ -284,6 +284,32 @@ You may need to set `snaky: false`. See inline documentation for more info.
     # @note does not modify the receiver, so bang is not the default method
     alias_method :revoke!, :revoke
 
+    def introspect(params = {}, &block)
+      token_type_hint_orig = params.delete(:token_type_hint)
+      token_type_hint = nil
+      introspect_token = case token_type_hint_orig
+      when "access_token", :access_token
+        token_type_hint = "access_token"
+        token
+      when "refresh_token", :refresh_token
+        token_type_hint = "refresh_token"
+        refresh_token
+      when nil
+        if token
+          token_type_hint = "access_token"
+          token
+        elsif refresh_token
+          token_type_hint = "refresh_token"
+          refresh_token
+        end
+      else
+        raise OAuth2::Error.new({error: "token_type_hint must be one of [nil, :refresh_token, :access_token], so if you need something else consider using a subclass or entirely custom AccessToken class."})
+      end
+      raise OAuth2::Error.new({error: "#{token_type_hint || "unknown token type"} is not available for introspecting"}) unless introspect_token && !introspect_token.empty?
+
+      @client.introspect_token(introspect_token, token_type_hint, params, &block)
+    end
+
     # Convert AccessToken to a hash which can be used to rebuild itself with AccessToken.from_hash
     #
     # @note Don't return expires_latency because it has already been deducted from expires_at

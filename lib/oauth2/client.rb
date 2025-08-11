@@ -58,6 +58,7 @@ module OAuth2
         authorize_url: "oauth/authorize",
         revoke_url: "oauth/revoke",
         token_url: "oauth/token",
+        introspect_url: "oauth/introspect",
         token_method: :post,
         auth_scheme: :basic_auth,
         connection_opts: {},
@@ -118,6 +119,14 @@ module OAuth2
     # @return [String] the constructed revoke URL
     def revoke_url(params = nil)
       connection.build_url(options[:revoke_url], params).to_s
+    end
+
+    # The introspect endpoint URL of the OAuth2 provider
+    #
+    # @param [Hash, nil] params additional query parameters
+    # @return [String] the constructed introspect URL
+    def introspect_url(params = nil)
+      connection.build_url(options[:introspect_url], params).to_s
     end
 
     # Makes a request relative to the specified site root.
@@ -262,6 +271,16 @@ module OAuth2
       req_opts = params_to_req_opts(params)
 
       request(http_method, revoke_url, req_opts, &block)
+    end
+
+    def introspect_token(token, token_type_hint = nil, params = {}, &block)
+      params[:token_method] ||= :post_with_query_string
+      params[:token] = token
+      params[:token_type_hint] = token_type_hint if token_type_hint
+
+      req_opts = params_to_req_opts(params)
+
+      request(http_method, introspect_url, req_opts, &block)
     end
 
     # The HTTP Method of the request
